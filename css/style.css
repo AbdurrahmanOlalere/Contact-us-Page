@@ -1106,3 +1106,139 @@ header a{
       padding: 10px 20px;
     }
   }
+.c_body{
+  background-color: #fff;
+
+}
+
+  .container_cntct{
+    position:relative;
+    min-height: 400px ;
+    padding: 50px 100px;;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image:
+    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+    url(/img/icbcLogo.png);
+    width: 100%;
+    background-size: cover;
+    color: white;
+  }
+
+  .container_cntct .heading_cntct{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+
+  }
+  .cont_card_wrap{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .cont_card_wrap .cont_card_item{
+    padding: 15px 25px;
+    width: 25%;
+
+  }
+
+  .cont_card_wrap .cont_card_inner{
+    background: #fff;
+    border-radius: 5px;
+    padding: 35px 20px;
+    min-width: 225px;
+    min-height: 315px;
+    max-height: 370px;
+    width: 100%;
+    
+  }
+
+  .cont_card_wrap .cont_card_inner img{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+
+  .cont_card_wrap .cont_card_inner .s_media{
+    color: #e36686;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+  .cont_card_wrap .cont_card_inner .s_media_p{
+    font-size: 14px;
+    line-height: 24px;
+    color: #23252B;
+  }
+  .FormContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+  }
+  .contact_form{
+    width: 400px;
+    padding: 40px;
+    background: #c75353;
+    justify-content: left;
+  }
+
+  .contact_form .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_form h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+
+  }
+  .contact_form .input_box{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .contact_form .input_box .input,textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    margin-bottom: 2px solid #333;
+    outline: none;
+  }
+
+
+
+
+  @media screen and (max-width: 1024px){
+    .cont_card_wrap .cont_card_item{
+      width: 33%;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .cont_card_wrap .cont_card_item{
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 1024px){
+    .cont_card_wrap .cont_card_item{
+      width: 100%;
+    }
+  }
+  
