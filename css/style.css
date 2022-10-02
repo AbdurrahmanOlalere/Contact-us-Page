@@ -1127,8 +1127,16 @@ header a{
   }
 
   .container_cntct .heading_cntct{
-    text-align: center;
-    font-size: 14px;
+    text-align: left;
+    font-size: 70px;
+    font-family: (--nunito);
+    color: #fff;
+
+  }
+  .container_cntct .heading_cntct{
+    text-align: left;
+    font-size: 40px;
+    font-family: (--nunito);
     color: #fff;
 
   }
@@ -1161,14 +1169,17 @@ header a{
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
-    align-items: center;
+    margin: auto;
+    display: block;
   }
 
   .cont_card_wrap .cont_card_inner .s_media{
     color: #e36686;
     font-weight: 900;
     letter-spacing: 2px;
+    margin-top: 20px;
     text-transform: uppercase;
+    text-align: center;
     font-size: 20px;
     white-space: nowrap;
     overflow: hidden;
@@ -1177,6 +1188,7 @@ header a{
   }
   .cont_card_wrap .cont_card_inner .s_media_p{
     font-size: 14px;
+    text-align: center;
     line-height: 24px;
     color: #23252B;
   }
@@ -1191,7 +1203,7 @@ header a{
   .contact_form{
     width: 400px;
     padding: 40px;
-    background: #c75353;
+    background: #fff;
     justify-content: left;
   }
 
@@ -1210,17 +1222,49 @@ header a{
   .contact_form .input_box{
     position: relative;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
   }
-  .contact_form .input_box .input,textarea{
+  .contact_form .input_box input,
+  .contact_form .input_box textarea{
     width: 100%;
     padding: 5px 0;
     font-size: 16px;
     margin: 10px 0;
     border: none;
-    margin-bottom: 2px solid #333;
+    border-bottom: 2px solid #333;
     outline: none;
+    resize: none;
   }
+  .contact_form .input_box span{
+    position:absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+  }
+
+  .contact_form .input_box input:focus ~ span,
+  .contact_form .input_box input:valid ~ span,
+  .contact_form .input_box textarea:focus ~ span,
+  .contact_form .input_box textarea:valid ~ span
+  {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+  }
+  .contact_form .input_box input[type = "submit"] {
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+  }
+
 
 
 
@@ -1236,9 +1280,8 @@ header a{
       width: 50%;
     }
   }
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 568px){
     .cont_card_wrap .cont_card_item{
       width: 100%;
     }
   }
-  
