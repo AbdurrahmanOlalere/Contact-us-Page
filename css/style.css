@@ -1273,16 +1273,19 @@ header a{
     .cont_card_wrap .cont_card_item{
       width: 33%;
     }
+  
   }
 
   @media screen and (max-width: 768px){
     .cont_card_wrap .cont_card_item{
       width: 50%;
     }
+  
   }
   @media screen and (max-width: 568px){
     .cont_card_wrap .cont_card_item{
       width: 100%;
     }
+
   }
   
