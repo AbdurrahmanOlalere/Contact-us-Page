@@ -1121,22 +1121,26 @@ header a{
     background-image:
     linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
     url(/img/icbcLogo.png);
+    background-attachment: fixed top;
+    background-position: top;
     width: 100%;
     background-size: cover;
     color: white;
+    
   }
 
   .container_cntct .heading_cntct{
-    text-align: left;
-    font-size: 70px;
-    font-family: (--nunito);
-    color: #fff;
+    color: #ffffff;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-size: 65px;
+    font-weight: 700;
 
   }
   .container_cntct .heading_cntct{
     text-align: left;
     font-size: 40px;
-    font-family: (--nunito);
+    font-family: "Roboto Condensed", Sans-serif;
+    font-weight: 700;
     color: #fff;
 
   }
@@ -1162,8 +1166,42 @@ header a{
     min-height: 315px;
     max-height: 370px;
     width: 100%;
-    
+    z-index: 0;
+    overflow: hidden;
+    border: 0px solid #f2f8f9;
   }
+  
+
+  .cont_card_inner:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: rgb(223, 223, 223);
+    text-decoration-color: #cccccc;
+  }
+
+  .cont_card_inner:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);  
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out;
+    }
+
+  .cont_card_inner:hover:before {
+    transform: scale(2.15);
+    }
+    
+  
+
+  
 
   .cont_card_wrap .cont_card_inner img{
     width: 80px;
@@ -1171,6 +1209,19 @@ header a{
     margin-bottom: 10px;
     margin: auto;
     display: block;
+  }
+  .cont_card_wrap .cont_card_inner:hover img{
+    width: 160px;
+    height: 160px;
+    margin-bottom: 10px;
+    margin: auto;
+    display: block;
+  }
+  .cont_card_wrap .cont_card_inner img:before{
+    transition: transform 1s ease-out ;
+  }
+  .cont_card_wrap .cont_card_inner img:hover:before{
+    transform: scale(2.15);
   }
 
   .cont_card_wrap .cont_card_inner .s_media{
@@ -1192,6 +1243,20 @@ header a{
     line-height: 24px;
     color: #23252B;
   }
+  
+  .cont_card_wrap .cont_card_inner a:link{
+    text-decoration: none;
+  }
+  .cont_card_wrap .cont_card_inner a:visited{
+    text-decoration: none;
+  }
+  .cont_card_wrap .cont_card_inner a:hover{
+    text-decoration: none;
+  }
+  .cont_card_wrap .cont_card_inner a:active{
+    text-decoration: none;
+  }
+ 
   .FormContainer{
     width: 100%;
     display: flex;
@@ -1211,6 +1276,30 @@ header a{
     width: 50%;
     display: flex;
     flex-direction: column;
+  }
+
+  .contact_form .contactInfo .c_box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+
+  }
+
+  .contact_form .contactInfo .c_box .icon{
+    min-width: 60px;
+    min-height: 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+  }
+
+  .contact_form .contactInfo .c_box .text{
+    display: flex;
+    margin-left: 20 px;
+    font-size: 16px;
+    color: black;
   }
   .contact_form h2{
     font-size: 30px;
@@ -1287,5 +1376,13 @@ header a{
       width: 100%;
     }
 
+  }
+  @media (max-width:991px){
+    .FormContainer{
+      flex-direction: column;
+    }
+    .FormContainer .contactInfo{
+      margin-bottom: 40px;
+    }
   }
   
