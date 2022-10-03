@@ -141,7 +141,7 @@
           </div>
 
           <div class = "contact_form">
-            <form action="https://formsubmit.co/your@email.com" method="POST">
+            <form onsubmit="sendEmail(); reset(); return false;">
               <h2>Send us a Message</h2>
                 <div class="input_box">
                   <input type="text" name ="" required="required">
@@ -161,7 +161,19 @@
             </form>
           </div>
         </div>
-            
-      </body>
-
-    
+        <script src ="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+          function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "rayman179237@gmail.com",
+                Password : "@Bolalere22",
+                To : 'olalereabdurrahman@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "Message from Contact us Page,MSA",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+          }
+        </script>
