@@ -1130,17 +1130,28 @@ header a{
   }
 
   .container_cntct .heading_cntct{
+<<<<<<< HEAD
     color: #ffffff;
     font-family: "Roboto Condensed", Sans-serif;
     font-size: 65px;
     font-weight: 700;
+=======
+    text-align: left;
+    font-size: 70px;
+    font-family: (--nunito);
+    color: #fff;
+>>>>>>> fd7250f9524309bc86741e704f6630fb54ba78fa
 
   }
   .container_cntct .heading_cntct{
     text-align: left;
     font-size: 40px;
+<<<<<<< HEAD
     font-family: "Roboto Condensed", Sans-serif;
     font-weight: 700;
+=======
+    font-family: (--nunito);
+>>>>>>> fd7250f9524309bc86741e704f6630fb54ba78fa
     color: #fff;
 
   }
@@ -1209,6 +1220,7 @@ header a{
     margin-bottom: 10px;
     margin: auto;
     display: block;
+<<<<<<< HEAD
   }
   .cont_card_wrap .cont_card_inner:hover img{
     width: 160px;
@@ -1222,6 +1234,8 @@ header a{
   }
   .cont_card_wrap .cont_card_inner img:hover:before{
     transform: scale(2.15);
+=======
+>>>>>>> fd7250f9524309bc86741e704f6630fb54ba78fa
   }
 
   .cont_card_wrap .cont_card_inner .s_media{
@@ -1333,6 +1347,28 @@ header a{
     pointer-events: none;
     transition: 0.5s;
     color: #666;
+<<<<<<< HEAD
+  }
+
+  .contact_form .input_box input:focus ~ span,
+  .contact_form .input_box input:valid ~ span,
+  .contact_form .input_box textarea:focus ~ span,
+  .contact_form .input_box textarea:valid ~ span
+  {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+  }
+  .contact_form .input_box input[type = "submit"] {
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+=======
+>>>>>>> fd7250f9524309bc86741e704f6630fb54ba78fa
   }
 
   .contact_form .input_box input:focus ~ span,
@@ -1353,6 +1389,7 @@ header a{
     padding: 10px;
     font-size: 18px;
   }
+
 
 
 
