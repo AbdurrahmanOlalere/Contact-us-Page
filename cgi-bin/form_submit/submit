@@ -1,0 +1,35 @@
+import email
+import ssl
+import smtplib
+import cgi
+from flask import request, redirect
+
+@app.route('cgi-bin/form_submit/submit', methods = ['POST'])
+def submit():
+    form = cgi.FieldStorage()
+    name =  form.getvalue('name')
+    mail = form.getvalue('email')
+    message = form.getvalue('message')
+    email_from = 'msawebmanager@gmail.com'
+    password = 'kclrvnzrhusleugt'
+    email_to = 'a_olalere@tamu.edu'
+    #string for email
+    email_string = ('Howdy, /n',message,'/n from:',mail,'/n name:',name)
+
+    context = ssl.create_default_context()
+
+    #connect to gmail outgoing smtp mail server
+    with smtplib.SMTP_SSL("smtp.gmail.com",465, context=context) as server:
+        # gmail login
+        server.login(email_from,password)
+        #send f=mail
+        server.sendmail(email_from, email_to, email_string)
+        print("The message is " + email_string  + "/n from:" + mail + "/n name:" + name)
+    return redirect('/')
+
+
+
+
+
+
+
