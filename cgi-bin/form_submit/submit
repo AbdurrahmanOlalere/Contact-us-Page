@@ -1,10 +1,12 @@
 import email
+from readline import append_history_file
 import ssl
 import smtplib
 import cgi
-from flask import request, redirect
+from flask import request, redirect, Flask
+app = Flask(__name__)
 
-@app.route('cgi-bin/form_submit/submit', methods = ['POST'])
+@app.route('contact.html', methods = ['POST'])
 def submit():
     form = cgi.FieldStorage()
     name =  form.getvalue('name')
