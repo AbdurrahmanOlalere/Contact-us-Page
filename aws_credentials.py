@@ -1,0 +1,5 @@
+host = 'database-2.cf1jgbqf66h7.us-east-2.rds.amazonaws.com'
+port = '3306'
+user = 'admin'
+password = 'backendtest'
+db = 'dbtest1'

@@ -7,9 +7,16 @@ $to = "msawebmanager@gmail.com"
 $subject = "Mail From MSA website Form_Submit"
 $txt = "Name = ". $name . "\r\n Email = " . $email . "\r\n Message = " . $message;
 $headers = "From:noreply@tamumsa.org" . "\r\n " . "CC:olalereabdurrahman@gmail.com";
-if($email!=NULL){
-    mail($to,$subject,$txt,$headers);
-}
+if($_POST["message"]) {
+
+
+    mail($to, $subject,
+    
+    
+    $_POST[$message]. "From: $email");
+    
+    
+    }
 //redirect
 header("Location:contact.html");
 ?>
